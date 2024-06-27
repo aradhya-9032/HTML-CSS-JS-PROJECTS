@@ -1,0 +1,67 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #4e4e4d;
+    margin-top: 100px;
+}
+.card{
+  width: 400px;
+}
+.card-content{
+    position: relative;
+    padding: 15rem 5rem;
+    transform-style:preserve-3d;
+    transition: transform 3s;
+}
+.card:hover .card-content{
+    transform: rotateY(180deg);
+    cursor: pointer;
+}
+.card-front,
+.card-back{
+    position: absolute;
+    inset: 0;
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    backface-visibility: hidden;
+    transform-style: preserve-3d;
+   border-radius: 10px;
+}
+.card-front{
+    background-image: url("assets/belive\ 1.jpg");
+    background-color: rgba(255, 163, 42, 0.2);
+    background-size: cover;
+    background-position:center;
+    align-items: center;
+}
+.card-front::before{
+    content:"";
+    position: absolute;
+    inset: 1rem;
+    /* border: 3px solid yellow; */
+    transform: translateZ(1rem);
+}
+.card-back{
+    background-image: url("https://media.istockphoto.com/id/1496615471/photo/mixed-race-woman-relax-and-breathing-fresh-air-outdoor-at-sunset.webp?b=1&s=170667a&w=0&k=20&c=g96mIvElKhJgO0BySBSSQdwMu7DBoa1ggtvwvQ0RAPg=");
+    transform: rotateY(180deg);
+    background-size: cover;
+    background-position:center;
+    gap: 0.5rem;
+}
+.title{
+    transform: rotateZ(4.4rem);
+    color: #fff;
+}
+.sub-title{
+    transform: translateZ(0.5rem);
+    color: #fff;
+
+}

@@ -1,0 +1,22 @@
+body{
+    display: flex;
+    position: relative;
+    justify-content: start;
+    left: 10rem;
+    align-items: center;
+    height: 100vh;
+    background: #000;
+    
+}
+
+img{
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    object-fit: cover;
+    border-radius: 100px;
+    padding: 2rem;
+    -webkit-box-reflect: right 0 linear-gradient(to right, #0000, #0009);
+}
+
+
